@@ -17,7 +17,7 @@ def calculate(numbers):
     min_val = [list(np.min(matrix, axis=0)), list(np.min(matrix, axis=1)), np.min(matrix)]
     sum_val = [list(np.sum(matrix, axis=0)), list(np.sum(matrix, axis=1)), np.sum(matrix)]
     
-    # Create the dictionary
+    # Create the dictionary with the desired format
     result = {
         'mean': mean,
         'variance': variance,
@@ -45,7 +45,12 @@ def main():
         try:
             result = calculate(numbers)
             st.write("Statistics of the matrix:")
-            st.write(result)
+            st.write("mean:", result['mean'])
+            st.write("variance:", result['variance'])
+            st.write("standard deviation:", result['standard deviation'])
+            st.write("max:", result['max'])
+            st.write("min:", result['min'])
+            st.write("sum:", result['sum'])
         except ValueError as e:
             st.error(str(e))
 
