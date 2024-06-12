@@ -45,12 +45,35 @@ def main():
         try:
             result = calculate(numbers)
             st.write("Statistics of the matrix:")
-            st.write("mean:", result['mean'])
-            st.write("variance:", result['variance'])
-            st.write("standard deviation:", result['standard deviation'])
-            st.write("max:", result['max'])
-            st.write("min:", result['min'])
-            st.write("sum:", result['sum'])
+            st.write("mean:")
+            st.write("Axis 1:", result['mean'][0])
+            st.write("Axis 2:", result['mean'][1])
+            st.write("Flattened:", result['mean'][2])
+            
+            st.write("variance:")
+            st.write("Axis 1:", result['variance'][0])
+            st.write("Axis 2:", result['variance'][1])
+            st.write("Flattened:", result['variance'][2])
+            
+            st.write("standard deviation:")
+            st.write("Axis 1:", result['standard deviation'][0])
+            st.write("Axis 2:", result['standard deviation'][1])
+            st.write("Flattened:", result['standard deviation'][2])
+            
+            st.write("max:")
+            st.write("Axis 1:", result['max'][0])
+            st.write("Axis 2:", result['max'][1])
+            st.write("Flattened:", result['max'][2])
+            
+            st.write("min:")
+            st.write("Axis 1:", result['min'][0])
+            st.write("Axis 2:", result['min'][1])
+            st.write("Flattened:", result['min'][2])
+            
+            st.write("sum:")
+            st.write("Axis 1:", result['sum'][0])
+            st.write("Axis 2:", result['sum'][1])
+            st.write("Flattened:", result['sum'][2])
         except ValueError as e:
             st.error(str(e))
 
